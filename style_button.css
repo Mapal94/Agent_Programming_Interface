@@ -1,0 +1,15 @@
+     
+     
+     
+     html, body {
+        background-color: #transparent;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+      }
+	  
+	  .buttonbar {
+		color: #fff;
+        background: rgba(21, 20, 20, 0.8) !important;
+	  }

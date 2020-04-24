@@ -1,0 +1,30 @@
+html, body {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+      }
+      .blocklySvg {
+        height: 100%;
+        width: 100%;
+        background-color: transparent !important; 
+      }
+      .blocklyToolboxDiv{
+        color: #fff;
+        background: rgba(21, 20, 20, 0.8) !important;
+        width: 20%;
+      }
+      .blocklyTreeRow{
+        line-height: 36px !important;
+        height: 40px !important;
+      }
+      .blocklyTreeRow:hover{
+          background-color: #3893e0 !important;
+          border-radius: 2px;
+          cursor: pointer !important;
+      }
+      .blocklyFlyoutBackground{
+        fill:rgba(66, 95, 103, 0.53) !important;
+      }
+    
