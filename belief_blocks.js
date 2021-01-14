@@ -1,76 +1,184 @@
 // custom belief blocks - output needs to be Belief
 'use strict';
 
-  Blockly.Blocks['belief_right'] = {
+
+
+//belief RobotPositionX
+ Blockly.Blocks['belief_RobotPositionX'] = {
     init: function() {
       this.jsonInit({
-    "type": "text_length",
-    "message0": "Right %1",
-    "args0": [
-        {
-          "type": "input_value",
-          "name": "NUMBER_TO_CHECK",
-          "check": ["TriggeringEventOperator", "Operator", "Action"],
-        }
-    ],
-    "output": "Belief",
-    "colour": 60,
-  });
+  "type": "belief_boolean",
+  "lastDummyAlign0": "RIGHT",
+  "message0": "Robot ready %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "boolean",
+      "options": [
+        [
+          "True",
+          "OPTIONNAME"
+        ],
+        [
+          "False",
+          "OPTIONNAME"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+});
     }
   };
 
-  Blockly.Blocks['belief_left'] = {
+//belief Optical Sensor (is there a cup to fill?)
+ Blockly.Blocks['belief_opticalSensorStatus'] = {
     init: function() {
       this.jsonInit({
-    "type": "text_length",
-    "message0": "Left %1",
-    "args0": [
-        {
-          "type": "input_value",
-          "name": "NUMBER_TO_CHECK",
-          "check": ["TriggeringEventOperator", "Operator", "Action"],
-        }
-    ],
-    "output": "Belief",
-    "colour": 60,
-  });
+  "type": "belief_boolean",
+  "lastDummyAlign0": "RIGHT",
+  "message0": "There is a cup to fill %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "boolean",
+      "options": [
+        [
+          "True",
+          "OPTIONNAME"
+        ],
+        [
+          "False",
+          "OPTIONNAME"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+});
     }
   };
 
 
-  Blockly.Blocks['belief_blue'] = {
+//belief ConveyorHeadStatus (can I fill another cup or is the line blocked?)
+ Blockly.Blocks['belief_conveyorHeadStatus'] = {
     init: function() {
       this.jsonInit({
-    "type": "text_length",
-    "message0": "Blue %1",
-    "args0": [
-        {
-          "type": "input_value",
-          "name": "NUMBER_TO_CHECK",
-          "check": ["TriggeringEventOperator", "Operator", "Action"],
-        }
-    ],
-    "output": "Belief",
-    "colour": 60,
-  });
+  "type": "belief_boolean",
+  "lastDummyAlign0": "RIGHT",
+  "message0": "subsequent line is occupied %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "boolean",
+      "options": [
+        [
+          "True",
+          "OPTIONNAME"
+        ],
+        [
+          "False",
+          "OPTIONNAME"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+});
     }
   };
 
 
-  Blockly.Blocks['belief_green'] = {
+//belief conveyorSpeed
+ Blockly.Blocks['belief_conveyorSpeed'] = {
     init: function() {
       this.jsonInit({
-    "type": "text_length",
-    "message0": "Green %1",
-    "args0": [
-        {
-          "type": "input_value",
-          "name": "NUMBER_TO_CHECK",
-          "check": ["TriggeringEventOperator", "Operator", "Action"],
-        }
-    ],
-    "output": "Belief",
-    "colour": 60,
-  });
+  "type": "belief_numeric",
+  "message0": "Conveyor speed %1 %2 %3",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "Operators",
+      "options": [
+        [
+          "<",
+          "bigger"
+        ],
+        [
+          ">",
+          "smaller"
+        ],
+        [
+          "=",
+          "equal"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy",
+      "align": "CENTRE"
+    },
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "align": "RIGHT"
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+} );
     }
   };
+  
+ 
+//blief stackLightStatus
+ Blockly.Blocks['belief_stackLightStatus'] = {
+    init: function() {
+      this.jsonInit({
+  "type": "belief_list",
+  "lastDummyAlign0": "RIGHT",
+  "message0": "Stack Light %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "List",
+      "options": [
+        [
+          "red",
+          "OPTIONNAME"
+        ],
+        [
+          "orange",
+          "OPTIONNAME"
+        ],
+        [
+          "green",
+          "OPTIONNAME"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+} );
+    }
+  };
+  

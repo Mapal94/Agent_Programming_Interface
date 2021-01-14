@@ -21,25 +21,19 @@ html, body {
     }
 
 
-    /* Split the screen in half */
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+    /* Split the screen in half for goals and saved plans*/
+.container {
+  display: flex;
 }
 
-/* Control the left side */
-.left {
-  left: 0;
-
+#col-1 {
+  background-color: white;
+  flex: 1;
 }
 
-/* Control the right side */
-.right {
-  right: 0;
+#col-2 {
+  background-color: white;
+  flex: 1;
+}
 
 }

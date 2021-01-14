@@ -1,0 +1,15 @@
+     
+     
+     
+ document.querySelector('ul').addEventListener('click', function(e) {   // 1.
+  var selected;
+  
+  if(e.target.tagName === 'LI') {                                      // 2.
+    selected= document.querySelector('li.selected');                   // 2a.
+    if(selected) selected.className= '';                               // "
+    e.target.className= 'selected';                                    // 2b.
+  }
+});
+.selected {
+  background: lightgreen;
+}

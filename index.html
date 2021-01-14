@@ -12,12 +12,12 @@
     <tbody>
 	<tr>
 	  <td height="5%" width="100%">
-	  <h1>AgentSpeak End User Programming Interface for Agent: Robotic Arm
-		<button onclick="myFunction()">Initial goal of Agent</button>
+	  <h1>Programming Interface: Filling Workshop
+		<button onclick="goalFunction()">Log of Agent</button>
 	  </h1>
 	  <script>
-		function myFunction() {
-		  alert("I want to move all boxes to the left");
+		function goalFunction() {
+		  alert("08:01:55 Plan_1, 08:02:05 Plan_2, 08:02:16 Plan_2, 08:02:20 Plan_1, 08:02:45 Plan_2 ");
 		}
 		</script>
 	</tr>
@@ -30,29 +30,35 @@
 	<td height="5%" width="100%">
 		<button id="saveButton">Save</button>
 		<button id="resetButton">Reset</button>
-		<button id="runButton">Run</button>
+		<!--<button id="runButton">Run</button>-->
 			<!--button bar behavior and style-->
 	  <link href="style_button.css" rel="stylesheet" type="text/css">
 	  <script type="text/javascript" src="button.js"></script>
 	</td>
 	</tr>
-	<tr> 
-		<td height="5%" width="100%"> 
-		<table width="100%" height="5%">
-       	 <tbody>
-        	<tr>
-          	<td height="5%" width="100%">
-		  	<h1>Saved Plans of Agent: Light</h1>
-		  	</tr>
-		</td>
-	</tr>
-
+	
 	<tr>
 	<!-- display the saved block languages-->
-	<td height="25%" width="100%">
-		<img src="Plans_light.PNG" alt="Plans of Light">
+<section class="container">
+<div id="col-1">
+    	<td height="25%" width="50%">
+		<h1>Saved plans of Agent</h1>
+		<img src="Plan_base.PNG" alt="Plans of Light">
 	</td>
+</div>
+
+<!-- display the list of goals-->
+<div id="col-2">
+  	<td height="25%" width="50%">
+	<h1>Goals of Agent</h1>
+	<img src="Goals.PNG" alt="Goals of Agent">
+	<button id="resetButton">Add Goal</button>
+	</td>
+</div>
+</section>	
 	</tr>
+	
+	
   </tbody>
   </table>
 
