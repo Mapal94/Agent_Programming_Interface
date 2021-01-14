@@ -6,6 +6,7 @@
 <script type="text/javascript" src="blockly_compressed.js"></script>
 <script type="text/javascript" src="javascript_compressed.js"></script>
 <script type="text/javascript" src="en.js"></script>
+<script type="text/javascript" src="custom_lists.js"></script>
 <link href="blockly_toolstation.css" rel="stylesheet" type="text/css">
 
 <!-- this script launches the toolstation functionality-->
@@ -26,46 +27,30 @@
 <body onload="init()">
   <xml id="toolbox" style="display: none">
 
-
-    <category name="Triggering Event Operator">
-       <script type="text/javascript" src="triggering_event_operator.js"></script>
-      <block type="TriggeringEventOperator_not"></block>
-      <block type="TriggeringEventOperator_is"></block>
+    <category name="Operator">
+     <script type="text/javascript" src="operator.js"></script>
+     <block type="structure_block"></block>
+	 <block type="user_textinput"></block>
+	 <block type="belief_deletion"></block>
+	 <block type="operator_plan_end"></block>
+	 <block type="communicate_to"></block>
     </category>
-
 
     <category name="Belief">
       <script type="text/javascript" src="belief_blocks.js"></script>
-      <block type="belief_left"></block>
-      <block type="belief_right"></block>
-      <block type="belief_blue"></block>
-      <block type="belief_green"></block>
+      <block type="belief_RobotPositionX"></block>
+      <block type="belief_opticalSensorStatus"></block>
+      <block type="belief_conveyorHeadStatus"></block>
+      <block type="belief_conveyorSpeed"></block>
+	  <block type="belief_stackLightStatus"></block>
     </category>
 
 
-    <category name="Action">
+    <category name="Operations">
      <script type="text/javascript" src="action_blocks.js"></script>
-     <block type="action_turnright"></block>
-     <block type="action_turnleft"></block>
-     <block type="action_grip"></block>
-     <block type="action_release"></block>
-     <!-- Commented out, because they are not own of Agent: Robotic Arm-->
-     <!-- <block type="action_lightblue"></block>
-     <block type="action_lightgreen"></block>
-     <block type="action_lightoff"></block>
-     <block type="action_lighton"></block> -->
+     <block type="action_fillpots"></block>
+	 <block type="action_emergencystop"></block>
     </category>
-
-
-    <category name="Operator">
-     <script type="text/javascript" src="operator.js"></script>
-     <block type="operator_end"></block>
-     <block type="operator_smaller"></block>
-     <block type="operator_bigger"></block>
-      <block type="operator_and"></block>
-     <block type="operator_plus"></block>
-    </category>
-
 
    </xml>
 </body>
