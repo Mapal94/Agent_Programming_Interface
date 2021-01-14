@@ -38,18 +38,19 @@
 
     <category name="Belief">
       <script type="text/javascript" src="belief_blocks.js"></script>
-      <block type="belief_RobotPositionX"></block>
-      <block type="belief_opticalSensorStatus"></block>
-      <block type="belief_conveyorHeadStatus"></block>
-      <block type="belief_conveyorSpeed"></block>
-	  <block type="belief_stackLightStatus"></block>
+      <block type="belief_boolean"></block>
+      <block type="belief_string"></block>
+      <block type="belief_list"></block>
+      <block type="belief_numeric"></block>
     </category>
 
 
     <category name="Operations">
      <script type="text/javascript" src="action_blocks.js"></script>
-     <block type="action_fillpots"></block>
-	 <block type="action_emergencystop"></block>
+     <block type="operator_simple_action"></block>
+	 <block type="action_boolean"></block>
+     <block type="action_numeric"></block>
+     <block type="action_list"></block>
     </category>
 
    </xml>
