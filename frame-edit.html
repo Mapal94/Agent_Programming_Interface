@@ -7,6 +7,8 @@
 <script type="text/javascript" src="javascript_compressed.js"></script>
 <script type="text/javascript" src="en.js"></script>
 <script type="text/javascript" src="custom_lists.js"></script>
+<!-- added 26.1.2021 line 11-->
+<script type="text/javascript" src="dropdowndiv.js"></script>
 <link href="blockly_toolstation.css" rel="stylesheet" type="text/css">
 
 <!-- this script launches the toolstation functionality-->
@@ -26,6 +28,7 @@
 
 <body onload="init()">
   <xml id="toolbox" style="display: none">
+  <script type="text/javascript" src="dropdowndiv.js"></script>
 
     <category name="Operator">
      <script type="text/javascript" src="operator.js"></script>
@@ -38,19 +41,18 @@
 
     <category name="Belief">
       <script type="text/javascript" src="belief_blocks.js"></script>
-      <block type="belief_boolean"></block>
-      <block type="belief_string"></block>
-      <block type="belief_list"></block>
-      <block type="belief_numeric"></block>
+      <block type="belief_RobotPositionX"></block>
+      <block type="belief_opticalSensorStatus"></block>
+      <block type="belief_conveyorHeadStatus"></block>
+      <block type="belief_conveyorSpeed"></block>
+	  <block type="belief_stackLightStatus"></block>
     </category>
 
 
     <category name="Operations">
      <script type="text/javascript" src="action_blocks.js"></script>
-     <block type="operator_simple_action"></block>
-	 <block type="action_boolean"></block>
-     <block type="action_numeric"></block>
-     <block type="action_list"></block>
+     <block type="action_fillpots"></block>
+	 <block type="action_emergencystop"></block>
     </category>
 
    </xml>

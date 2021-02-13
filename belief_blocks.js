@@ -2,13 +2,18 @@
 'use strict';
 
 
-//belief boolean
- Blockly.Blocks['belief_boolean'] = {
+//Dropdown js
+
+
+
+
+//belief RobotPositionX
+ Blockly.Blocks['belief_RobotPositionX'] = {
     init: function() {
       this.jsonInit({
   "type": "belief_boolean",
   "lastDummyAlign0": "RIGHT",
-  "message0": "%1",
+  "message0": "Robot ready %1",
   "args0": [
     {
       "type": "field_dropdown",
@@ -16,11 +21,11 @@
       "options": [
         [
           "True",
-          "OPTIONNAME"
+          "TRUE"
         ],
         [
           "False",
-          "OPTIONNAME"
+          "FALSE"
         ]
       ]
     }
@@ -34,53 +39,25 @@
     }
   };
 
-
-//blief string
- Blockly.Blocks['belief_string'] = {
+//belief Optical Sensor (is there a cup to fill?)
+ Blockly.Blocks['belief_opticalSensorStatus'] = {
     init: function() {
       this.jsonInit({
-  "type": "belief_string",
-  "message0": "%1",
-  "args0": [
-    {
-      "type": "input_value",
-      "name": "NAME",
-      "align": "RIGHT"
-    }
-  ],
-  "inputsInline": true,
-  "output": null,
-  "colour": 230,
-  "tooltip": "",
-  "helpUrl": ""
-});
-    }
-  };
-  
-  
-//blief list
- Blockly.Blocks['belief_list'] = {
-    init: function() {
-      this.jsonInit({
-  "type": "belief_list",
+  "type": "belief_boolean",
   "lastDummyAlign0": "RIGHT",
-  "message0": "%1",
+  "message0": "There is a cup to fill %1",
   "args0": [
     {
       "type": "field_dropdown",
-      "name": "List",
+      "name": "boolean",
       "options": [
         [
-          "option",
-          "OPTIONNAME"
+          "True",
+          "TRUE"
         ],
         [
-          "option",
-          "OPTIONNAME"
-        ],
-        [
-          "option",
-          "OPTIONNAME"
+          "False",
+          "FALSE"
         ]
       ]
     }
@@ -90,17 +67,51 @@
   "colour": 230,
   "tooltip": "",
   "helpUrl": ""
-} );
+});
     }
   };
-  
-  
-//belief numeric
- Blockly.Blocks['belief_numeric'] = {
+
+
+//belief ConveyorHeadStatus (can I fill another cup or is the line blocked?)
+ Blockly.Blocks['belief_conveyorHeadStatus'] = {
+    init: function() {
+      this.jsonInit({
+  "type": "belief_boolean",
+  "lastDummyAlign0": "RIGHT",
+  "message0": "subsequent line is occupied %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "boolean",
+      "options": [
+        [
+          "True",
+          "TRUE"
+        ],
+        [
+          "False",
+          "FALSE"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+});
+    }
+  };
+
+
+
+//belief conveyorSpeed
+ Blockly.Blocks['belief_conveyorSpeed'] = {
     init: function() {
       this.jsonInit({
   "type": "belief_numeric",
-  "message0": "%1 %2 %3",
+  "message0": "Conveyor speed %1 %2 %3",
   "args0": [
     {
       "type": "field_dropdown",
@@ -108,15 +119,15 @@
       "options": [
         [
           "<",
-          "bigger"
+          "BIGGER"
         ],
         [
           ">",
-          "smaller"
+          "SMALLER"
         ],
         [
           "=",
-          "equal"
+          "EQUAL"
         ]
       ]
     },
@@ -138,5 +149,41 @@
 } );
     }
   };
-
-
+  
+ 
+//blief stackLightStatus
+ Blockly.Blocks['belief_stackLightStatus'] = {
+    init: function() {
+      this.jsonInit({
+  "type": "belief_list",
+  "lastDummyAlign0": "RIGHT",
+  "message0": "Stack Light %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "List",
+      "options": [
+        [
+          "red",
+          "RED"
+        ],
+        [
+          "orange",
+          "ORANGE"
+        ],
+        [
+          "green",
+          "GREEN"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+} );
+    }
+  };
+  
