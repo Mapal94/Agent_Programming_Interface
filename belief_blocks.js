@@ -3,24 +3,26 @@
 
 
 //belief boolean
- Blockly.Blocks['belief_boolean'] = {
+Blockly.Blocks['belief_boolean'] = {
     init: function() {
+	//var dropdown = new Blockly.FieldDropdown([['True', 'TRUE'], ['False', 'FALSE']]);
+//input.appendField(dropdown, 'MODE');
       this.jsonInit({
   "type": "belief_boolean",
   "lastDummyAlign0": "RIGHT",
-  "message0": "%1",
+  "message0": "Triggering Event %1",
   "args0": [
     {
       "type": "field_dropdown",
       "name": "boolean",
       "options": [
         [
-          "True",
-          "OPTIONNAME"
+		  "True",
+          "TRUE"
         ],
         [
-          "False",
-          "OPTIONNAME"
+		  "False",
+          "FALSE"
         ]
       ]
     }
@@ -40,7 +42,7 @@
     init: function() {
       this.jsonInit({
   "type": "belief_string",
-  "message0": "%1",
+  "message0": "String belief %1",
   "args0": [
     {
       "type": "input_value",
@@ -64,23 +66,23 @@
       this.jsonInit({
   "type": "belief_list",
   "lastDummyAlign0": "RIGHT",
-  "message0": "%1",
+  "message0": "List belief %1",
   "args0": [
     {
       "type": "field_dropdown",
       "name": "List",
       "options": [
         [
-          "option",
-          "OPTIONNAME"
+          "option1",
+          "OPTIONNAME1"
         ],
         [
-          "option",
-          "OPTIONNAME"
+          "option2",
+          "OPTIONNAME2"
         ],
         [
-          "option",
-          "OPTIONNAME"
+          "option3",
+          "OPTIONNAME3"
         ]
       ]
     }
@@ -100,7 +102,7 @@
     init: function() {
       this.jsonInit({
   "type": "belief_numeric",
-  "message0": "%1 %2 %3",
+  "message0": "Numeric belief %1 %2 %3",
   "args0": [
     {
       "type": "field_dropdown",

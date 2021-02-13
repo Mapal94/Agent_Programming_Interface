@@ -13,7 +13,7 @@
 <script>
       function init() {
         Blockly.inject(document.body, {
-		  path: '../../', 
+		  path: "C:\Users\Matthias\Desktop\Most promising Wesite_191027", 
           toolbox: document.getElementById('toolbox')
         });
         // Dispatch the event.
@@ -21,6 +21,7 @@
         window.parent.dispatchEvent(domEvent);
       }
 </script>
+ 
  
 </head>
 
@@ -38,10 +39,16 @@
 
     <category name="Belief">
       <script type="text/javascript" src="belief_blocks.js"></script>
-      <block type="belief_boolean"></block>
+      <block type="belief_boolean">
+		<field name="boolean">OPTIONNAME</field>
+	</block>
       <block type="belief_string"></block>
-      <block type="belief_list"></block>
-      <block type="belief_numeric"></block>
+      <block type="belief_list">
+		<field name="List">OPTIONNAME</field>
+	</block>
+      <block type="belief_numeric">
+		<field name="Operators">bigger</field>
+	</block>
     </category>
 
 
@@ -53,7 +60,7 @@
      <block type="action_list"></block>
     </category>
 
-   </xml>
+   </xml> 
 </body>
 </html>
 

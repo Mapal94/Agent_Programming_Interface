@@ -13,10 +13,10 @@
 	<tr>
 	  <td height="5%" width="100%">
 	  <h1>Programming Interface: Sample Agent
-		<button onclick="goalFunction()">Log of Agent</button>
+		<button onclick="logFunction()">Log of Agent</button>
 	  </h1>
 	  <script>
-		function goalFunction() {
+		function logFunction() {
 		  alert("08:01:55 Plan_1, 08:02:05 Plan_2, 08:02:16 Plan_2, 08:02:20 Plan_1, 08:02:45 Plan_2 ");
 		}
 		</script>
@@ -24,17 +24,26 @@
     <tr>
       <td height="60%" width="100%">
 	<iframe src="frame-edit.html"></iframe>
+	<script type="text/javascript" src="workspace_blocks.js"></script>
+	<div id="blocklyDiv" style="position: absolute" id="blockly_editor"></div>
       </td>
     </tr>	
 	<tr>
 	<td height="5%" width="100%">
-		<button id="saveButton">Save</button>
-		<button id="resetButton">Reset</button>
-		<!--<button id="runButton">Run</button>-->
-			<!--button bar behavior and style-->
+		<button onclick="saveButton()">Save</button>
+		<button onclick="resetButton()">Reset</button>
 	  <link href="style_button.css" rel="stylesheet" type="text/css">
-	  <script type="text/javascript" src="button.js"></script>
+	  <!-- <script type="text/javascript" src="button.js"></script> commented out 210210--> 
 	</td>
+	<!-- newly added 210210 -->
+	<script>
+		function saveButton() {
+		  alert("Congratulations! You have achieved the goal of the task! Please take a screenshot of your plans and return to the survey");
+		}
+		function resetButton() {
+		  alert("Please reset the workspace manually by deleting the blocks");
+		}
+		</script>
 	</tr>
 	
 	<tr>
@@ -52,8 +61,13 @@
   	<td height="25%" width="50%">
 	<h1>Goals of Agent</h1>
 	<img src="Goals.PNG" alt="Goals of Agent">
-	<button id="resetButton">Add Goal</button>
+	<button onclick="addButton()">Add Goal</button>
 	</td>
+	<script>
+		function addButton() {
+		  alert("This workflow is not part of the task.");
+		}
+		</script>
 </div>
 </section>	
 	</tr>

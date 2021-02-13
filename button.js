@@ -22,12 +22,10 @@
 			}, 500);	// couch couch
 		}
 	})
-	document.querySelector('#runButton').addEventListener('click', function(event){
-		saveWorkspace()
-		runWorkspace()
-	})
 	document.querySelector('#saveButton').addEventListener('click', function(event){
-		saveWorkspace()
+		function goalFunction() {
+		  alert("Congratulations on completing the task! The plan can not be saved. Please take a screenshot of oyur");
+		}
 
 	})
 	document.querySelector('#resetButton').addEventListener('click', function(event){

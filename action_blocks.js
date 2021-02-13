@@ -10,7 +10,7 @@ Blockly.Blocks['action_boolean'] = {
       this.jsonInit({
   "type": "action_boolean",
   "lastDummyAlign0": "RIGHT",
-  "message0": "Move %1",
+  "message0": "Operation %1",
   "args0": [
     {
       "type": "field_dropdown",
@@ -18,11 +18,11 @@ Blockly.Blocks['action_boolean'] = {
       "options": [
         [
           "True",
-          "OPTIONNAME"
+          "OPTIONNAME1"
         ],
         [
           "False",
-          "OPTIONNAME"
+          "OPTIONNAME2"
         ],
       ]
     }
@@ -43,7 +43,7 @@ Blockly.Blocks['action_numeric'] = {
     init: function() {
       this.jsonInit({
   "type": "action_numeric",
-  "message0": "%1 %2  %3",
+  "message0": "Numeric action %1 %2  %3",
   "args0": [
     {
       "type": "field_dropdown",
@@ -89,23 +89,23 @@ Blockly.Blocks['action_list'] = {
       this.jsonInit({
   "type": "action_list",
   "lastDummyAlign0": "RIGHT",
-  "message0": "%1",
+  "message0": "List action %1",
   "args0": [
     {
       "type": "field_dropdown",
       "name": "List",
       "options": [
         [
-          "option",
-          "OPTIONNAME"
+          "option1",
+          "OPTIONNAME1"
         ],
         [
-          "option",
-          "OPTIONNAME"
+          "option2",
+          "OPTIONNAME2"
         ],
         [
-          "option",
-          "OPTIONNAME"
+          "option3",
+          "OPTIONNAME3"
         ]
       ]
     }
@@ -126,7 +126,7 @@ Blockly.Blocks['operator_simple_action'] = {
     init: function() {
       this.jsonInit({
   "type": "block_type",
-  "message0": "Action 1 %1",
+  "message0": "Simple action %1",
   "args0": [
     {
       "type": "input_dummy"

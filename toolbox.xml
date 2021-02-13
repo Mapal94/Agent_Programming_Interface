@@ -1,0 +1,12 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <block type="belief_boolean">
+    <field name="boolean">OPTIONNAME</field>
+  </block>
+  <block type="belief_string"></block>
+  <block type="belief_list">
+    <field name="List">OPTIONNAME</field>
+  </block>
+  <block type="belief_numeric">
+    <field name="Operators">bigger</field>
+  </block>
+</xml>

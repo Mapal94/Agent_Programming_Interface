@@ -123,19 +123,19 @@ Blockly.Blocks['communicate_to'] = {
       "options": [
         [
           "Agent1",
-          "AGENTNAME"
+          "AGENTNAME1"
         ],
         [
           "Agent2",
-          "AGENTNAME"
+          "AGENTNAME2"
         ],
         [
           "Agent3",
-          "AGENTNAME"
+          "AGENTNAME3"
         ],
         [
           "Agent4",
-          "AGENTNAME"
+          "AGENTNAME4"
         ]
       ]
     },
