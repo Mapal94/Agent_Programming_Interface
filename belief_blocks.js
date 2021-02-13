@@ -2,6 +2,10 @@
 'use strict';
 
 
+//Dropdown js
+
+
+
 
 //belief RobotPositionX
  Blockly.Blocks['belief_RobotPositionX'] = {
@@ -17,11 +21,11 @@
       "options": [
         [
           "True",
-          "OPTIONNAME"
+          "TRUE"
         ],
         [
           "False",
-          "OPTIONNAME"
+          "FALSE"
         ]
       ]
     }
@@ -49,11 +53,11 @@
       "options": [
         [
           "True",
-          "OPTIONNAME"
+          "TRUE"
         ],
         [
           "False",
-          "OPTIONNAME"
+          "FALSE"
         ]
       ]
     }
@@ -82,11 +86,11 @@
       "options": [
         [
           "True",
-          "OPTIONNAME"
+          "TRUE"
         ],
         [
           "False",
-          "OPTIONNAME"
+          "FALSE"
         ]
       ]
     }
@@ -99,6 +103,7 @@
 });
     }
   };
+
 
 
 //belief conveyorSpeed
@@ -114,15 +119,15 @@
       "options": [
         [
           "<",
-          "bigger"
+          "BIGGER"
         ],
         [
           ">",
-          "smaller"
+          "SMALLER"
         ],
         [
           "=",
-          "equal"
+          "EQUAL"
         ]
       ]
     },
@@ -160,15 +165,15 @@
       "options": [
         [
           "red",
-          "OPTIONNAME"
+          "RED"
         ],
         [
           "orange",
-          "OPTIONNAME"
+          "ORANGE"
         ],
         [
           "green",
-          "OPTIONNAME"
+          "GREEN"
         ]
       ]
     }
