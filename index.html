@@ -13,10 +13,10 @@
 	<tr>
 	  <td height="5%" width="100%">
 	  <h1>Programming Interface: Filling Workshop
-		<button onclick="goalFunction()">Log of Agent</button>
+		<button onclick="logFunction()">Log of Agent</button>
 	  </h1>
 	  <script>
-		function goalFunction() {
+		function logFunction() {
 		  alert("08:01:55 Plan_1, 08:02:05 Plan_2, 08:02:16 Plan_2, 08:02:20 Plan_1, 08:02:45 Plan_2 ");
 		}
 		</script>
@@ -28,20 +28,27 @@
     </tr>	
 	<tr>
 	<td height="5%" width="100%">
-		<button id="saveButton">Save</button>
-		<button id="resetButton">Reset</button>
-		<!--<button id="runButton">Run</button>-->
-			<!--button bar behavior and style-->
+		<button onclick="saveButton()">Save</button>
+		<button onclick="resetButton()">Reset</button>
+			<!--button bar style and behavior-->
 	  <link href="style_button.css" rel="stylesheet" type="text/css">
-	  <script type="text/javascript" src="button.js"></script>
 	</td>
+	<script>
+		function saveButton() {
+		  alert("Congratulations! You have achieved the goal of the task! Please take a screenshot of your plans and return to the survey");
+		}
+		function resetButton() {
+		  alert("Please reset the workspace manually by deleting the blocks");
+		}
+		</script>
+	</tr>
 	</tr>
 	
 	<tr>
 	<!-- display the saved block languages-->
 <section class="container">
 <div id="col-1">
-    	<td height="25%" width="50%">
+    	<td height="30%" width="50%">
 		<h1>Saved plans of Agent</h1>
 		<img src="Plan_base.PNG" alt="Plans of Light">
 	</td>
@@ -49,16 +56,19 @@
 
 <!-- display the list of goals-->
 <div id="col-2">
-  	<td height="25%" width="50%">
+  	<td height="30%" width="50%">
 	<h1>Goals of Agent</h1>
 	<img src="Goals.PNG" alt="Goals of Agent">
-	<button id="resetButton">Add Goal</button>
+	<button onclick="addButton()">Add Goal</button>
 	</td>
+	<script>
+		function addButton() {
+		  alert("This workflow is not part of the task.");
+		}
+	</script>
 </div>
 </section>	
 	</tr>
-	
-	
   </tbody>
   </table>
 
